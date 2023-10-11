@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>프레임 연습하기(html4)</title>
+<!--html5에서는 지원하지 않음 (관리자 모드에서는 사용해도 되지만 사용자 모드에서는 사용 금지)-->
+</head>
+<!--body는 본문의 내용을 적는것이고 프레임은 틀만 잡는거기 때문에 body 태그 적지 않아도 됨-->
+<frameset rows="20%,80%" frameborder="0">  <!-- 80%는 나머지 전체 영역이면 *로 적어도 됨-->
+  <frame src="t1.html" name="header" noresize>
+  <frameset cols="180px,*">  <!-- 프레임 쪼개기-->
+    <frame src="t2.html" name="left" noresize>
+    <frame src="t3.html" name="content">
+  </frameset>
+  <noframes>
+    <p>이 페이지를 보려면 프레임을 지원하는 브라우저가 필요합니다.</p>
+  </noframes>
+</frameset>
+</html>

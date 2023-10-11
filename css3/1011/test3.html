@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test3.html</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .box {
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid gray;
+        }
+        #box1 {
+            background-color: greenyellow;
+        }
+        #box2 {
+            background-color: orchid;
+            width: 300px;
+        }
+        #box3 {
+            background-color: orange;
+            width: 300px;
+            height: 100px;
+            /* padding: 50px; */
+            line-height: 100px;
+            text-align: center;
+        }
+        #box4 {
+            background-color: pink;
+            margin: 0 auto; /*윈도우기준으로 가운데 정렬 하려면 auto로 설정*/
+            width: 300px;
+            height: 100px;
+            font-size: 20pt;
+            line-height: 100px;
+            text-align: right;
+        }
+        #box5 {
+            background-color: skyblue;
+            width: 300px;
+            height: 100px;
+            /* border-style: double; */
+            border-style: dashed;
+            border-width: 10px;
+        }
+        #box6 {
+            background-color: crimson;
+            width: 300px;
+            height: 100px;
+            border-width: 3px;
+            /* border-radius: 10px; */
+            /* border-radius: 30px 5000px; */
+            border-radius: 30px 30px 0px 0px;
+        }
+        #box7 {
+            background-color: rgb(114, 235, 128);
+            width: 300px;
+            height: 100px;
+            border-width: 2px;
+            overflow: auto;
+            /* overflow: hidden; */
+            padding: 5px;
+        }
+        #box8 {
+            background-color: rgb(190, 103, 103);
+            width: 300px;
+            height: 100px;
+            border-width: 2px;
+            font-size: 30pt;
+            font-weight: bolder;
+            color: blue;
+            text-shadow: 5px 3px 3px gray;
+            /* x축, y축, 흐림의 정도, 그림자 색상 */
+        }
+        #box9 {
+            background-color: rgb(23, 68, 119);
+            width: 300px;
+            height: 100px;
+            text-transform: lowercase; /*text 속성 바꾸기*/
+        }
+        #box10 {
+            background-color: rgb(5, 72, 99);
+            width: 300px;
+            height: 100px;
+            text-transform: uppercase;
+            font-size: 25pt;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #box11 {
+            background-color: rgb(97, 46, 86);
+            width: 300px;
+            height: 100px;
+            text-decoration: line-through; /*취소선체*/
+        }
+        #box12 {
+            width: 200px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Box Layout</h2>
+    <div class="box" id="box1">1.안녕하세요</div>
+    <div class="box" id="box2">2.안녕하세요</div>
+    <div class="box" id="box3">3.안녕하세요</div>
+    <div class="box" id="box4">4.안녕하세요</div>
+    <div class="box" id="box5">5.안녕하세요</div>
+    <div class="box" id="box6">6.안녕하세요</div>
+    <div class="box" id="box7">
+        71.안녕하세요<br />
+        72.안녕하세요<br />
+        73.안녕하세요<br />
+        74.안녕하세요<br />
+        75.안녕하세요<br />
+        76.안녕하세요<br />
+        77.안녕하세요77.안녕하세요77.안녕하세요77.안녕하세요77.안녕하세요77.안녕하세요<br />
+        78.안녕하세요<br />
+        79.안녕하세요<br />
+        80.안녕하세요<br />
+    </div>
+    <div class="box" id="box8">8.안녕하세요</div>
+    <div class="box" id="box9">9.Good Morning</div>
+    <div class="box" id="box10">10.Good Morning</div>
+    <div class="box" id="box11">11.Good Morning</div>
+    <div class="box" id="box12">
+        12.Good Morning<br />
+        <img src="../../images/1.jpg" width="300px" />
+    </div>
+</body>
+</html>

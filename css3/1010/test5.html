@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5.html</title>
+    <style>
+        * {
+            /* 전체 selecter */
+            font-family: "궁서";
+            font-size: 12pt;
+        }
+        /* body {
+            font-size: 10pt;
+        } */
+        p {
+            font-size: 10pt;
+        }
+        #mbc {
+            /* id는 #으로 표시 후 이름 적으면 해당 id 갖은 부분만 적용 */
+            color: red;
+        }
+        .mbc {
+            color: gray;
+        }
+        p.mbc {
+            color: orange;
+        }
+        .seoul {
+            /* class로 지정한 것은 .으로 설정 */
+            color: green;
+        }
+        /* id와 class 차이점
+        class (.): 하나의 페이지 안에서 같은 이름의 속성으로 여러번 적용할 때 사용
+        id (#): 현재 페이지에서 한 번만 적용할 때 사용
+        */
+    </style>
+</head>
+<body>
+    <h2>스타일 혼용 사용예제</h2>
+    <p>1.안녕하세요</p>
+    <p id="mbc">2.안녕하세요</p>
+    <p>3.안녕하세요</p>
+    <p class="seoul">4.안녕하세요</p>
+    <p>5.안녕하세요</p>
+    <p class="seoul">6.안녕하세요</p>
+    <p>7.안녕하세요</p>
+    <p class="seoul">8.안녕하세요</p>
+    <p>9.안녕하세요</p>
+    <p class="mbc">10.안녕하세요</p>
+    <h3 class="mbc">11.안녕하세요</h3>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1.html(혼합 스타일)</title>
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="test2.css">
+    <style>
+        h4 {font-size: 50pt}   
+        h3 {
+            font-size: 25pt;
+            color:rgb(241, 131, 217)
+        }
+        /* 외부 내부 스타일은 내부가 우선 순위 */
+        /* h2 {
+            background-color: aquamarine;
+        } */
+        /* 스네이크 표기법 (-) */
+    </style>
+</head>
+<body>
+    <h1>Casecading Style Sheet 연습</h1>
+    <h2>Casecading Style Sheet 연습</h2>
+    <h3>Casecading Style Sheet 연습</h3>
+    <h4>Casecading Style Sheet 연습(50pt)</h4>
+    <h5>Casecading Style Sheet 연습</h5>
+    <h6>Casecading Style Sheet 연습</h6>
+    <h4 style="font-size: 30pt">Casecading Style Sheet 연습(30pt)</h4>
+    <!-- inline style이 우선 -->
+    <h3 style="color: green">Casecading Style Sheet 연습</h3>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test.html</title>
+  <style>
+    body {
+      border: 0px;
+      padding: 0px;
+      width: 450px;
+    }
+    #id, #pwd {
+      width: 100px;
+    }
+    legend {
+      color: blue;
+      
+    }
+    #input label{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <fieldset>
+      <legend>로그인</legend>
+      <label for="id">아이디</label>
+      <input type="text" name="id" id="id" autofocus />
+      <label for="pwd">비밀번호</label>
+      <input type="password" name="pwd" id="pwd" />
+      <input type="button" value="로그인" />
+    </fieldset>
+    <fieldset id="input">
+      <legend>가입하기</legend>
+      <label for="id2">아이디 <span class="*">*</span></label>
+      <input type="text" name="id2" id="id2" placeholder="아이디를 입력하세요" required />
+      <label for="pwd1">비밀번호 <span class="*">*</span></label>
+      <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요" required />
+      <label for="pwd2">비밀번호 확인 <span class="*">*</span></label>
+      <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 한 번 더 입력하세요" required />
+      <label for="name">이름 <span class="*">*</span></label>
+      <input type="text" name="name" id="name" placeholder="성명을 입력하세요" required />
+      <label for="email">메일 주소 <span class="*">*</span></label>
+      <input type="email" name="email" id="email" placeholder="이메일을 입력하세요" required />
+      <label for="tel">전화번호</label>
+      <input type="tel" name="tel" id="tel" placeholder="전화번호를 입력하세요" required />
+    </fieldset>
+  </div>
+</body>
+</html>

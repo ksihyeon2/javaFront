@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+  <style>
+    body {
+      border: 0px;
+      padding: 0px;
+    }
+    .container {
+      display: grid;
+      grid-template-areas: 
+        'item1 item1'
+        'item2 item3'
+        'item4 item4';
+
+        /* container의 크기가 다 다를때*/
+      grid-template-rows: 150px 1fr 100px; 
+      grid-template-columns: 150px 1fr;
+
+      /*1fr은 정확한 크기를 주지 않았기 때문에 최소 크기를 지정*/
+      height: 800px;
+    }
+    .item {
+      text-align: center;
+      line-height: 100px;
+      color: white;
+    }
+    .item1 {
+      grid-area: item1;
+      background-color: green;
+    }
+    .item2 {
+      grid-area: item2;
+      background-color: yellow;
+      color: black;
+    }
+    .item3 {
+      grid-area: item3;
+      background-color: pink;
+      color: black;
+    }
+    .item4 {
+      grid-area: item4;
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">header</div>
+    <div class="item item2">aside</div>
+    <div class="item item3">
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+      <p>content</p>
+    </div>
+    <div class="item item4">footer</div>
+  </div>
+</body>
+</html>

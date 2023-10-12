@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test8.html</title>
+  <style>
+    body {
+      border: 0px;
+      margin: 0px;
+    }
+    /* .container {
+      display: grid;
+      grid-template-areas: 
+        'item1 item1 item1'
+        'item2 item2 item3'
+        'item4 item5 item5'; 원하는 모양의 틀을 만들어 줌
+      grid-template-rows: repeat(3, 200px);
+      grid-template-columns: repeat(3, 200px);
+      height: 200px;
+      width: 600px; 폭을 하나에 200씩 주었기 때문에 3열이므로 600으로 지정
+      margin: 0px auto;
+    } */
+    .container {
+      display: grid;
+      grid-template-areas: 
+        'item1 item1 item1'
+        'item2 item2 item3'
+        'item4 item5 item5';
+
+      /* grid-template-rows: repeat(3, 1fr); 1fr : frame을 다 쓰겠다는 의미 (균등 분할)
+      grid-template-columns: repeat(3, 1fr); */
+      margin: 0px 50px;
+    }
+    .item {
+      text-align: center;
+      line-height: 200px;
+      color: white;
+    }
+    .item1 {
+      grid-area: item1;
+      background-color: plum;
+    }
+    .item2 {
+      grid-area: item2;
+      background-color: pink;
+    }
+    .item3 {
+      grid-area: item3;
+      background-color: skyblue;
+    }
+    .item4 {
+      grid-area: item4;
+      background-color: wheat;
+    }
+    .item5 {
+      grid-area: item5;
+      background-color: lightsalmon;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+  </div>
+</body>
+</html>

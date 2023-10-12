@@ -1,0 +1,34 @@
+/* test7.css */
+body {
+  border: 0px;
+  margin: 0px;
+}
+.container {
+  /* width: 1000px;*/
+  height: 100vh;
+  background-color: #eee;
+}
+.item {
+  margin: 10px;
+  background-color: yellowgreen;
+  padding: 10px;
+}
+.big-item1, .big-item2 {
+  display: grid; /*2차원*/
+  margin: 20px;
+}
+/* 
+.big-item1 {
+  grid-template-columns: repeat(3, 200px);
+}
+.big-item2 {
+  grid-template-columns: repeat(4, 100px);
+} 
+*/
+.big-item1 {
+  grid-template-rows: 100px 200px; /*1,2번째 행 크기 설정됨*/
+}
+.big-item2 {
+  grid-template-rows: 100px 200px;
+  grid-template-columns: repeat(3, 200px);
+}

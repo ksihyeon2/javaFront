@@ -1,0 +1,76 @@
+/* test6.css */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0.8em;
+}
+.container {
+  background-color: antiquewhite;
+  height: 100vh; /*vh : 수직 높이를 다 쓰겠다는 의미(윈도우 전체), %는 사용한 높이까지만 사용*/
+  display: flex;
+  /* flex-direction: row; 기본(행 기준) */
+  /* flex-direction: column; 기본(열 기준) */
+  /* flex-direction: row-reverse; reverse를 붙이면 정렬이 오른쪽부터 */
+  /* flex-direction: column-reverse; 아래쪽부터 정렬 */
+  /* flex-wrap: nowrap; 밑으로 떨어지지 않고 창이 더이상 줄어들지 않음 (기본 설정) */
+  /* flex-wrap: wrap; 윈도우 창 기준으로 밑으로 떨어짐 */
+  /* flex-wrap: wrap-reverse; */
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  /* 정렬 */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; 순서가 바뀌지 않고 정렬만 바뀜 */
+  /* justify-content: center; */
+  
+  /* 여백 */
+  /* justify-content: space-around; 양옆으로 균등 분할 */
+  /* justify-content: space-between; 양옆으로 균등 분할, 시작과 마지막은 공백 없음 */
+  justify-content: space-evenly; /*한쪽만 균등 분할*/
+  
+  
+  /* align-items: center; 한가운데로 정렬 */
+  align-items: baseline; /* 글자를 기준으로 정렬*/
+  /* align-content: space-between; 맨 위,아래 기준으로 떨어짐*/ 
+  /* align-content: space-around; */
+  align-content: center;
+}
+.item {
+  width: 70px;
+  height: 70px;
+  border: 1px solid greenyellow;
+  text-align: center;
+}
+.item1 {
+  background-color: darksalmon;  
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+}
+.item2 {
+  background-color: aqua;  
+}
+.item3 {
+  background-color: cadetblue;  
+}
+.item4 {
+  background-color: cornflowerblue;  
+}
+.item5 {
+  background-color: darkseagreen;  
+}
+.item6 {
+  background-color: hotpink;  
+}
+.item7 {
+  background-color: darkkhaki;  
+}
+.item8 {
+  background-color: plum;  
+}
+.item9 {
+  background-color: violet;  
+}
+.item10 {
+  background-color: coral;  
+}

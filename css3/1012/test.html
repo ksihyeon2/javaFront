@@ -13,19 +13,29 @@
     #id, #pwd {
       width: 100px;
     }
-    legend {
+    .test1 {
       color: blue;
-      
+      font-weight: bolder;      
     }
     #input label{
       display: block;
+    }
+    .item {
+      color: red;
+      font-weight: bolder;
+    }
+    /* fieldset {
+      display: block;
+    } */
+    div {
+      display: inline-block;
     }
   </style>
 </head>
 <body>
   <div>
     <fieldset>
-      <legend>로그인</legend>
+      <legend class="test1">로그인</legend>
       <label for="id">아이디</label>
       <input type="text" name="id" id="id" autofocus />
       <label for="pwd">비밀번호</label>
@@ -33,20 +43,31 @@
       <input type="button" value="로그인" />
     </fieldset>
     <fieldset id="input">
-      <legend>가입하기</legend>
-      <label for="id2">아이디 <span class="*">*</span></label>
+      <legend class="test1">가입하기</legend>
+      <label for="id2">아이디 <span class="item">*</span></label>
       <input type="text" name="id2" id="id2" placeholder="아이디를 입력하세요" required />
-      <label for="pwd1">비밀번호 <span class="*">*</span></label>
+      <label for="pwd1">비밀번호 <span class="item">*</span></label>
       <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요" required />
-      <label for="pwd2">비밀번호 확인 <span class="*">*</span></label>
+      <label for="pwd2">비밀번호 확인 <span class="item">*</span></label>
       <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 한 번 더 입력하세요" required />
-      <label for="name">이름 <span class="*">*</span></label>
+      <label for="name">이름 <span class="item">*</span></label>
       <input type="text" name="name" id="name" placeholder="성명을 입력하세요" required />
-      <label for="email">메일 주소 <span class="*">*</span></label>
+      <label for="email">메일 주소 <span class="item">*</span></label>
       <input type="email" name="email" id="email" placeholder="이메일을 입력하세요" required />
       <label for="tel">전화번호</label>
       <input type="tel" name="tel" id="tel" placeholder="전화번호를 입력하세요" required />
     </fieldset>
+    <!-- <fieldset> -->
+    <div>
+      <legend class="test2">등록 정보</legend>
+      <label for="pp">참여인원<span class="sub">(최대 10명)</span></label>
+      <input type="number" name="number" id="number" value="5" max="10" />
+      <label for="pp">지원물품<span class="sub">(1인당 5개)</span></label>
+      <input type="number" name="number" id="number" value="1" max="5" />
+      <label for="pp">희망 단계<span class="sub">(하,중,상)</span></label>
+      <input type="range" name="number" id="number" value="0" max="3"/>
+    <!-- </fieldset> -->
+    </div>
   </div>
 </body>
 </html>

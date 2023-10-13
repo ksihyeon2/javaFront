@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test1.html</title>
+  <!-- 외부 script -->
+  <!-- <script language="javascript" type="text/javascript"> 예전에는 이렇게 사용했음-->
+    <script>
+    document.write("1.이곳은 자바스크립트 입니다.");
+    // 윈도우 밑에가 document이므로 document로 접근해야 함
+    // javascript는 대소문자 구별 함
+    console.log("반갑습니다.");  // clg
+    console.log("반갑습니다.", "또 만나요");
+    console.log("반갑습니다.", "또 만나요", 10*20);
+    alert("안녕하세요");
+    console.clear();  // ccl
+    console.log("콘솔 출력");  
+    </script>
+</head>
+<body>
+  <h2>이곳은 body태그 안의 h2태그 입니다.</h2>
+  <!-- 내부 script -->
+  <script>
+    document.write("2.이곳은 자바스크립트 입니다.");
+  </script>
+</body>
+</html>

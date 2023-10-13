@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test4.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script>
+    // 덧셈 처리 (덧셈만 자동형변환 안됨)
+    function add() {
+      su1 = document.myform.su1.value;
+      su2 = document.myform.su2.value;
+      add = parseInt(su1) + parseInt(su2);
+      alert("첫 번째 수 : " + su1 + "\n두 번째 수 : " + su2 + "\n\n두 수의 합 : " + add);
+      // 더하기는 문자도 더할 수 있어서(문자와 문자를 붙이기) 자동형변환이 되지 않음
+    }
+    // 곱셈 처리
+    function mul() {
+      su1 = document.myform.su1.value;
+      su2 = document.myform.su2.value;
+      mul = su1 * su2;
+      alert("첫 번째 수 : " + su1 + "\n두 번째 수 : " + su2 + "\n\n두 수의 곱 : " + mul);
+      // 자동 형 변환
+    }
+  </script>
+</head>
+<body>
+  <p><br /></p>
+  <div class="container">
+    <h2>폼 태그와 자바스크립트 연습</h2>
+    <form name="myform">
+      <!-- 이름 맘대로 주어도 상관 없음 -->
+      <p>
+        <div class="form-group mt-5">
+          <label for="su1"> 첫 번째 수 </label> 
+          <input type="text" name="su1" id="su1" value="0" class="form-control"/>
+        </div>
+        <div class="form-group mt-2">
+          <label for="su2"> 두 번째 수 </label> 
+          <input type="text" name="su2" id="su2" value="0" class="form-control"/>
+        </div>
+        <div>
+          <input type="button" value="더하기" onclick="add()" class="btn btn-warning form-control mb-2" />
+          <input type="button" value="빼기" onclick="sub()" class="btn btn-warning form-control" />
+        </div>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11_2.html</title>
+  <script>
+    'use strict';
+    function fCheck() {
+      let gender;
+      if(document.getElementById("gender1").checked) {
+        gender = "남자";
+      }
+      if(document.getElementById("gender2").checked) {
+        gender = "여자";
+      }
+      // 프론트에서는 else를 쓰지 않고 다시 체크 함
+      demo.innerHTML = "<font color='orange'><b>"+gender+"</b></font>"
+    }
+  </script>
+</head>
+<body>
+  <h2>라디오 버튼값 체크하기</h2>
+  <form name="myform">
+    <div>
+      <input type="radio" name="gender" id="gender1" value="남" />남자
+      <input type="radio" name="gender" id="gender2" value="여" checked/>여자
+      <!-- 라디오 버튼은 id가 같으면 안됨 -->
+      <!-- 백앤드에서 같은 이름으로 오면 무조건 배열로 봄-->
+      <input type="button" value="성별 체크" onclick="fCheck()" />
+    </div>
+  </form>
+  <hr />
+  <div id="demo"></div>
+</body>
+</html>

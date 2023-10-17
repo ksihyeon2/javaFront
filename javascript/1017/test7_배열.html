@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script>
+    'use strict';
+    const arr1 = new Array();
+    // 배열 생성
+    console.log("arr1 : ", arr1);
+    console.log("===========================");
+    
+    const arr2 = ['사과','배','바나나','딸기','포도'];
+    console.log("arr2 : ", arr2);
+    console.log("arr2.length", arr2.length);
+    
+    // 배열의 값 추가 : 뒤로 추가 (push()) ,앞으로 추가 (unshift())
+    arr2.push('참외','앵두','자두');
+    console.log(arr2);
+    arr2.forEach((arr) => console.log(arr));
+    // arr2.의 값을 arr로 받음
+    // 하나만 사용할 거라서 받을 변수만 적음
+    console.log("===========================");
+    
+    arr2.unshift('키위','복숭아');
+    console.log(arr2);
+    arr2.forEach((arr) => console.log(arr));
+    console.log("===========================");
+    
+    // 배열의 값 삭제 : 뒤에서부터 삭제(pop()) , 앞에서부터 삭제(shift()) , 지정한 요소의 제거(splice(인덱스번호,개수))
+    arr2.pop();
+    arr2.pop();
+    console.log(arr2);
+    arr2.forEach((arr) => console.log(arr));
+    console.log("===========================");
+    
+    arr2.shift();
+    console.log(arr2);
+    arr2.forEach((arr) => console.log(arr));
+    
+    arr2.splice(2,1);
+    console.log(arr2);
+    arr2.forEach((arr) => console.log(arr));
+    
+    // arr2.splice(3);
+    // // 3번 index부터 그 뒤로 다 지움
+    // console.log(arr2);
+    // arr2.forEach((arr) => console.log(arr));
+
+    // 기존 배열의 값을 가져와서 묶기
+    let fruits = arr2.slice(3);
+    // 인덱스번호 3번부터 잘라서 fruits에 담기
+    // 배열을 담았기 때문에 타입은 object임
+    console.log(fruits);
+    fruits.forEach((arr) => console.log(arr));
+    arr2.forEach((arr) => console.log(arr));
+
+    fruits = arr2.slice(2,4);
+    // 인덱스 2번부터 4번째 앞의 요소까지 추출
+    console.log(fruits);
+
+    // 두 개의 배열을 묶어서 작업 (concat())
+    let concatFruits = arr2.concat(fruits);
+    // arr2의 값에 fruits의 값을 합침
+    console.log(concatFruits);
+
+    // 배열 안에서의 자료 검색 (indextOf())
+    // indexOf() : 값이 있으면 인덱스 번호로 출력(값이 여러개면 앞의 인덱스 번호 출력됨), 없으면 -1로 출력
+    console.log(concatFruits.indexOf("딸기"));
+    console.log(concatFruits.indexOf("자몽"));
+    // 첫 번째 값 이후에 나오는 값을 읽기 위해서는 해당 값의 인덱스 번호 다음부터 찾게 지정
+    console.log(concatFruits.indexOf("딸기", concatFruits.indexOf("딸기")+1));
+
+    // includes() : 값이 있으면 ture 출력, 없으면 false 출력
+    console.log(concatFruits.includes("딸기"));
+    console.log(concatFruits.includes("자몽"));
+
+    // lastIndexOf() : 값을 뒤에서부터 찾아 있으면 인덱스 번호로 출력, 없으면 -1로 출력
+    console.log(concatFruits.lastIndexOf("딸기"));
+    console.log(concatFruits.lastIndexOf("자몽"));
+
+
+    console.clear();
+    concatFruits.forEach((data,idx) => console.log(data,idx));
+    console.log('=====================');
+    
+    // map을 이용한 객체자료의 출력 : map((받을변수,[index],[배열명]) => {});
+    // []는 필요할 때만 사용 가능
+    concatFruits.map((data,idx) => console.log(data,idx));
+    // forEach와 map의 사용법과 결과는 같지만 map은 체인 기법이 가능함
+    </script>
+</head>
+<body>
+  <p><br ></p>
+  <div class="container">
+    <h2>배열(Array) 연습</h2>
+  </div>
+</body>
+</html>

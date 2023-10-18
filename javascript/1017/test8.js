@@ -69,12 +69,22 @@ console.log('arr3 : ',arr3);
 // sort는 문자로 꺼내오기 때문에 숫자형식으로는 8이 제일 작지만 문자 형식으로는 앞 글자부터 비교하기 때문에 8이 제일 큰 값으로 해석됨
 
 // 오름차순 정렬 : sort() ==> 무조건 문자열 형식으로 정렬(들어있는 타입이 모두 같지 않기 때문에 문자로 형변환됨) 
-let res3 = arr3.sort();
-console.log('res3 : ',res3);
+// let res3 = arr3.sort();
+// console.log('res3 : ',res3);
 
-// 내림차순 정렬 : reverse()  ==> 문자열 형식으로 거꾸로 정렬
-let res4 = arr3.reverse();
-console.log('res4 : ',res4);
+// 역순 정렬 : reverse()  ==> 문자열 형식으로 거꾸로 정렬
+// let res4 = arr3.reverse();
+// console.log('res4 : ',res4);
+
+// 오름차순 정렬 : sort((a,b) => a-b) ==> 숫자 형식으로 정렬
+// 예 : a가 3, b가 5이면, a-b는 음수이기에 a가 b보다 작은 값 즉, 작은 값이 앞에 있게 됨 
+let res3 = arr3.sort((a,b) => a-b); 
+console.log('오름차순 : ',res3);
+
+// 내림차순 정렬 : sort((a,b) => b-a) ==> 숫자 형식으로 정렬
+// 예 : a가 3, b가 5이면, 오름차순 조건과 반대로 b-a가 양수이기에 b가 큰 값. 따라서 큰 값이 앞에 있게 됨 
+let res4 = arr3.sort((a,b) => b-a); 
+console.log('내림차순 : ',res4);
 
 console.log('arr3 : ',arr3);
 arr3.forEach((data,idx) => console.log(data,':',idx));

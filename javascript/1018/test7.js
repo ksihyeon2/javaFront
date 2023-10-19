@@ -26,6 +26,7 @@ function regCheck() {
   const regex24 = /\w/g;    // 영문자,숫자,'_' 을 포함하고 있는지 확인
   const regex25 = /\W/g;    // 영문자,숫자,'_' 만 포함하고 있는지 확인 (w의 부정)
   const regex26 = /\s/g;    // 문장안에 공백(탭 포함)을 포함하고 있는지 확인
+  const regex27 = /\b/g;     // 단어의 경계
 
   const regex31 = /홍길자?/g;   // ? 앞의 글자가 0개나 1개 포함 유무
   const regex32 = /홍길자+/g;   // + 앞의 글자가 1개 이상 포함 유무

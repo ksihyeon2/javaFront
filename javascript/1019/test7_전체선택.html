@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
+  <script>
+    'use strict';
+
+    function foodCheck(e) {
+      if(e.checked) { 
+        demo.innerHTML = `<font color='red'><b>${e.value}</b></font> 선택`;
+      } else {
+        demo.innerHTML = `<font color='blue'><b>${e.value}</b></font> 취소`;
+      }
+    }
+
+    // 전체 선택
+    function allCheck() {
+      for(let i=0; i<myform.food.length; i++) {
+        myform.food[i].checked = true;
+      }
+    }
+
+    // 전체 취소
+    function allReset() {
+      for(let i=0; i<myform.food.length; i++) {
+        myform.food[i].checked = false;
+      }
+
+    }
+    
+    // 선택 반전1
+    function reverseCheck1() {
+      for(let i=0; i<myform.food.length; i++) {
+        if(myform.food[i].checked) {
+          myform.food[i].checked = false;
+        } else {
+          myform.food[i].checked = true;
+        }
+      }
+    }
+
+    // 선택 반전2
+    function reverseCheck2() {
+      for(let i=0; i<myform.food.length; i++) {
+          myform.food[i].checked = !myform.food[i].checked;
+      }
+    }
+
+    // 선택값 출력
+    function outCheck() {
+      let foods = '';
+      for(let i=0; i<myform.food.length; i++) {
+        if(myform.food[i].checked) {
+          foods += myform.food[i].value + '<br />';
+        }
+      }
+      demo.innerHTML = `<b> <font color='red'>선택 된 음식</font> </b><br /><font color='orange'>${foods}</font>`;
+    }
+
+  </script>
+</head> 
+<body>
+  <p><br ></p>
+  <div class="container">
+    <h2>좋아하는 음식</h2>
+    <form name="myform">
+      <p>
+        <input type="checkbox" name="food" value="탕수육" onclick="foodCheck(this)" class="mr-2 " />탕수육
+        <input type="checkbox" name="food" value="삼겹살" onclick="foodCheck(this)" class="mr-2 ml-2" />삼겹살
+        <input type="checkbox" name="food" value="제육덮밥" onclick="foodCheck(this)" class="mr-2 ml-2" />제육덮밥
+        <input type="checkbox" name="food" value="해산물" onclick="foodCheck(this)" class="mr-2 ml-2"  />해산물
+        <input type="checkbox" name="food" value="돈가스" onclick="foodCheck(this)" class="mr-2 ml-2" />돈가스
+        <input type="checkbox" name="food" value="볶음우동" onclick="foodCheck(this)" class="mr-2 ml-2" />볶음우동
+        <input type="checkbox" name="food" value="김치볶음밥" onclick="foodCheck(this)" class="mr-2 ml-2" />김치볶음밥
+      </p>
+      <hr />
+      <p>
+        <input type="button" value="전체 선택" onclick="allCheck()" class="btn btn-sm btn-success" />
+        <input type="button" value="전체 취소" onclick="allReset()" class="btn btn-sm btn-success" />
+        <input type="button" value="선택 반전1" onclick="reverseCheck1()" class="btn btn-sm btn-success" />
+        <input type="button" value="선택 반전2" onclick="reverseCheck2()" class="btn btn-sm btn-success" />
+        <input type="button" value="선택값 출력" onclick="outCheck()" class="btn btn-sm btn-success" />
+      </p>
+      <hr />
+      <div id="demo"></div>
+    </form>
+  </div>
+</body>
+</html>

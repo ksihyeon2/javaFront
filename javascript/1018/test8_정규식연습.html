@@ -29,12 +29,12 @@
     function fCheck() {
       // 정규식 정의
       let regMid = /\w{4,20}$/; 
-      let regPwd = /[a-zA-z0-9_][~!@#$%^&*()_+{)]/; 
+      let regPwd = /([a-zA-z]+&)[0-9_][~!@#$%^&*()_+{)]/; 
       let regnickName = /[가-힣]$/; 
-      let regname = /[가-힣a-zA-z]$/;
+      let regname = /[가-힣a-zA-z]+$/;
       // let regemail = /([a-zA-Z1-9][@]{1}[a-zA-Z][\.]{1}[a-zA-Z])?=.*/;
       // let reghomePage = /http:[\/]{2}[a-zA-Z0-9]/;
-      let regtel = /[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}/;
+      let regtel = /\d{2,3}-\d{3,4}-\d{4}/;
       let regjumin = /[0-9]{6}-[0-9]{1}/;
 
       // form에 입력된 값들을 변수에 담기

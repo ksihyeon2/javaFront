@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test1.html</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  <script>
+    'use strict';
+    
+    window.onload = function() {
+      myform.su.value = 5000;
+    }  // 화면을 먼저 로드 시켜놓은 후 익명함수로 실행되게 함
+    
+    function fCheck() {
+      let num = myform.su.value;
+      myform.su.value = numberWithCommas(num);
+    }
+
+    // 콤마 변환 함수
+      function numberWithCommas(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g,`,`);
+      }
+    </script>
+</head>
+<body>
+  <h2>jQuery 연습</h2>
+  <form name="myform">
+    수 : <input type="text" value="10" name="su" id="su" autofocus/>
+    <input type="button" value="계산" onclick="fCheck()" />
+    <input type="button" value="계산" onclick="fCheck()" />
+  </form>
+</body>
+</html>

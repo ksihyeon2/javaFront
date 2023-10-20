@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
+  <script>
+    'use strict';
+
+    $(() => {
+      let hiddenData = $(".container > div:hidden").map((idx,data)=>{
+        return $(data).html();
+      });
+      console.log(hiddenData);
+      // $("#temp").html(hiddenData);
+      // 현재는 display가 none으로 되어 있어 화면에 출력할 수 없어서 에러가 남
+      console.log("--------------------------------------------");
+      
+      let hiddenItemp = $('.container > div').map((idx,data) => {
+        return $(data).html();
+      });
+      console.log(hiddenItemp);
+      console.log("--------------------------------------------");
+      
+      hiddenItemp = $('.container > div').map((idx,data) => {
+        return $(data).html();
+      }).get().join("/");
+      // join() 함수를 사용하기 위해서는 무조건 get() 함수와 함께 사용해야 한다.
+      console.log(hiddenItemp);
+      // $('#temp').html(hiddenItemp);
+      $('#temp').text(hiddenItemp);
+    });
+  </script>
+</head>
+<body>
+  <p><br ></p>
+  <div class="container">
+    <h2>안녕하세요</h2>
+    <div style="opacity: 0.2;">1.안녕하세요</div>
+    <div style="display: none;">2.안녕하세요</div>
+    <div>3.안녕하세요</div>
+    <div style="visibility: hidden;">4.안녕하세요</div>
+    <div style="overflow: hidden;">5.안녕하세요</div>
+    <div style="overflow: hidden; width:50px; height: 35px;">6.안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</div>
+    <div style="overflow: hidden; width:0px; height: 0px;">7.안녕하세요</div>
+    <div>8.안녕하세요</div>
+    <hr />
+    <div id="demo">9.안녕하세요
+      <div>mbc</div>
+      <div>kbs</div>
+      <div>sbs</div>
+    </div>
+    <div>10.안녕하세요</div>
+    <hr />
+    <div id="temp"></div>
+  </div>
+</body>
+</html>

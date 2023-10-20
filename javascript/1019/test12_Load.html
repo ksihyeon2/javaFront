@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
+  <script>
+    'use strict';
+    
+    // 본문의 내용을 모두 로딩 시킨 후 처리
+    // window.onload = function clac() {
+      // 이벤트를 안에다가 적어줄때는 on 생략
+    window.addEventListener('load',function() {
+      let productVar = document.getElementById("product");
+      let priceVar = document.getElementById("price");
+      let suVar = document.getElementById("su");
+
+      // function clac() {
+        calcBtn.addEventListener('click' , function() {
+          // addEventListener(동작 , 기능)
+        let product = productVar.value;
+        let price = priceVar.value;
+        let su = suVar.value;
+  
+        if(isNaN(price) | isNaN(su)) {
+          alert("단가와 수량은 숫자만 입력 가능합니다.");
+          priceVar.focus();
+          suVar.focus();
+          return false;
+        }
+        let res = price * su;
+        demo.innerHTML = `상품명 : ${product} , 단가 : ${price} , 수량 ${su} , 총 가격 : ${res}`;
+      });
+    });
+
+  </script>
+</head>
+<body>
+  <p><br ></p>
+  <div class="container">
+    <h2>상품 가격 계산하기</h2>
+    <form name="myform">
+      <div>상품명
+        <input type="text" name="product" id="product" value="냉장고" autofocus class="form-control mb-3" />
+      </div>
+      <div>상품 가격
+        <input type="text" name="price" id="price" value="1000" class="form-control mb-3" />
+      </div>
+      <div>구매 수량
+        <input type="text" name="su" id="su" value="2" class="form-control mb-3" />
+      </div>
+      <div>
+        <input type="button" value="계산하기" id="calcBtn" class="btn-info form-control" />
+      </div>
+    </form>
+    <hr />
+    <div id="demo"></div>
+  </div>
+</body>
+</html>

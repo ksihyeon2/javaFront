@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
+  <script>
+    'use strict';
+
+    $(() => {
+      $('.container div').css('color','lightgray')
+        .filter((idx,data) => {
+          return idx % 2 == 0;
+        }).css('color','orange')
+        .filter('.test2').css('fontSize','20pt');
+    });
+
+  </script>
+</head>
+<body>
+  <p><br ></p>
+  <div class="container">
+    <h2>진달래꽃</h2>
+    <p>작가 :<span id="user">김소월</span></p>
+    <div class="yeon">1연</div>
+    <div>나 보기가 <span class="test">역겨워</span> 가실 때에는</div>
+    <div><span class="main">말없이</span> 고이 보내 드리오리다.</div>
+    <div class="yeon">2연</div>
+    <div>영변에 <span class="yeon">약산</span> 진달래꽃</div>
+    <div><span class="test main">아름 따다</span> 가실 길에 <span class="aa">뿌리오리다.</span></div>
+    <div class="yeon">3연</div>
+    <div class="test2 kbs">가시는 걸을 걸음 놓인 그 꽃을</div>
+    <div>사뿐이 <span class="test">즈려 밝고</span> <span class="bb">가시옵소서</span></div>
+    <div class="yeon">4연</div>
+    <div class="test2">나 보기가 역겨워 <span class="main">가실 때에는</span></div>
+    <div>죽어도 <span class="test">아니 눈물</span> <span class="cc">흘리오리다.</span></div>
+    <div>The End</div>
+    <hr />
+    <span>안녕하세요.(span)</span>
+    <div id="demo">안녕하세요.</div>
+  </div>
+</body>
+</html>

@@ -1,30 +1,146 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test.html</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
-  <script>
-    'use strict';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        'use strict';
+        
+        let i;
+        let product;
+        let productprice = [];
+        let cnt = 0;
+        let buyClick = 0;
 
-  </script>
+        function test() {
+            for(i=1; i<=3; i++) {
+                document.getElementById("refrigerator"+i).style.display = `none`;
+                document.getElementById("washer"+i).style.display = `none`;
+                document.getElementById("notebook"+i).style.display = `none`;
+            }
+        }
+
+
+        function choice(e) {
+            if(e == '선택') {
+                test();
+                if(cnt > 1) {
+                    location.reload();
+                }
+                cnt = 0;
+            } else if(e == '냉장고') {
+                product = '냉장고';
+                test();
+                for(i=1; i<=3; i++) {
+                    document.getElementById("refrigerator"+i).style.display = `block`;
+                }
+                cnt++;
+            } else if(e == '세탁기') {
+                product = '세탁기';
+                test();
+                for(i=1; i<=3; i++) {
+                    document.getElementById("washer"+i).style.display = `block`;
+                }
+                cnt++;
+            } else {
+                product = '노트북';
+                test();
+                for(i=1; i<=3; i++) {
+                    document.getElementById("notebook"+i).style.display = `block`;
+                }
+                cnt++;
+            } 
+        }
+
+        function price(e) {
+            productprice = e.split('/');
+        }
+
+        function buy() {
+            let su = document.getElementById('su').value;
+            if(su <= 0 ) {
+                alert('최소 주문 수량은 1개 입니다.');
+                document.getElementById('su').focus();
+                return ;
+            } else if(su > 3) {
+                alert('최대 주문 수량은 3개 입니다.');
+                document.getElementById('su').focus();
+                return ;
+            } else {
+                let vat = (su *parseInt(productprice[1])) * 0.1;
+                let tot = (su *parseInt(productprice[1])) + vat;
+                const tot1 = tot.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+
+                if(buyClick == 0) {
+                    pr1.innerHTML += '상품 : ' + product;
+                    pr2.innerHTML += '종류 : ' + productprice[0];
+                    su1.innerHTML += '수량 : ' + su;
+                    tot3.innerHTML += '총 가격(VAT 10% 포함) : ' + `${tot1}원`;
+                    buyClick=1;
+                } else {
+                    pr1.innerHTML = '';
+                    pr2.innerHTML = '';
+                    su1.innerHTML = '';
+                    tot3.innerHTML = ''; 
+                    pr1.innerHTML += '상품 : ' + product;
+                    pr2.innerHTML += '종류 : ' + productprice[0];
+                    su1.innerHTML += '수량 : ' + su;
+                    tot3.innerHTML += '총 가격(VAT 10% 포함) : ' + `${tot1}원`;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-  <p><br ></p>
-  <div class="container">
-    <form name="myform" class="container p-3 my-3 border">
-      <div class="row">
-        <div class="col"><input type="button" value="''" onclick="timeCheck()" class="btn btn-sm btn-success form-control"/></i></div>
-        <div class="col"><input type="button" value="초기화" onclick="reset()" class="btn btn-sm btn-primary form-control"/></div>
-      </div>
+    <p><br /></p>   
+    <div class="container p-3 my-3 border">
+        <form name="myform">
+            <h2>상품 구매</h2>
+            <p>
+                <label for="product" class="form-group ">상품명</label>
+                <select name="product" onclick="choice(value)">
+                    <option value="선택" >선택</option>
+                    <option value="냉장고">냉장고</option>
+                    <option value="세탁기">세탁기</option>
+                    <option value="노트북">노트북</option>
+                </select>
+            </p>
+            <p>
+                <label for="product" class="form-group ">가격</label>
+                <select name="productprice" onclick="price(value)"> 
+                    <option value="" >선택</option>
+                    <option value="일반형/1000000" id="refrigerator1" class="price1">일반형(1000000)</option>
+                    <option value="양문형/1500000" id="refrigerator2" class="price1">양문형(1500000)</option>
+                    <option value="김치냉장고/2000000" id="refrigerator3" class="price1">김치냉장고(2000000)</option>
+                    <option value="드럼/1000000" id="washer1" class="price1">드럼(1000000)</option>
+                    <option value="일반/1500000" id="washer2" class="price1">일반(1500000)</option>
+                    <option value="통돌이/2000000" id="washer3" class="price1">통돌이(2000000)</option>
+                    <option value="일반/1000000" id="notebook1" class="price1">일반(1000000)</option>
+                    <option value="게이밍/1500000" id="notebook2" class="price1">게이밍(1500000)</option>
+                    <option value="맥북/2000000" id="notebook3" class="price1">맥북(2000000)</option>
+                </select>
+            </p>
+            <p>
+                <label for="su">수량</label>
+                <input type="number" name="su" id="su" value="0" min="1" max="3" />
+            </p>
+            <p>
+                <input type="button" value="구매" onclick="buy()" class="btn btn-primary" />
+            </p>
+            <hr />
+            <div id="demo">
+                <label for="pr" id="pr1"></label><br />
+                <label for="pr" id="pr2"></label><br />
+                <label for="pr" id="su1"></label><br />
+                <label for="pr" id="tot3"></label>
+            </div>
+        </form>
     </div>
-  </form>
 </body>
 </html>

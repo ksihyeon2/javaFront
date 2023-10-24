@@ -1,34 +1,319 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1020과제.html</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
-  <script>
-    'use strict';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        'use strict';
+        
+    </script>
+    <Style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background:linear-gradient(to bottom, skyblue,white);
+        }
 
-  </script>
-  <style>
-    * {
-      background-color: lightblue;
+        #item1 {
+            background-image: url("../../images/옥룡설산.jpg");
+            background-size: cover;
+            width: 1020px;
+            height: 300px;
+        }
+        #main {
+            font-size: 30pt;
+            margin: 30px;
+            color: white;
+            text-decoration: none;
+        }
+        #itme2{
+            width: 1020px;
+        }
+        #data1 {
+            text-align: center;
+            width: 1020px;
+            padding: 0px;
+        }
+        ul,li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #data1 a {
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        #data1 ul {
+            color: white;
+            background-color: green;
+        }
+        #data1 ul li {
+            display: inline-block;
+            position: relative;
+            width: 200px;
+            padding: 10px;
+        }
+        #data1 ul li:hover {
+            background-color: greenyellow;
+            color: black;
+        }
+        #data1 ul li ul {
+            display: none;
+            position: absolute;
+            top: 42px;
+            left: 0px
+        }
+        #data1 ul li:hover ul {
+            display: block;
+        }
+        #data2{
+            width: 800px; 
+            height: 850px; 
+            float: left;
+            background-color: white; 
+            padding: 25px;
+        }
+        #data3{
+            width: 220px; 
+            height: 850px; 
+            float: left; 
+            background-color: white;
+        }
+        .imgs {
+            width: 180px;
+            margin:20px;
+        }
+        img:hover {
+            opacity: 0.6;
+            border: 2px solid;
+        }
+        #item3 {
+            background-color: #252525;
+            width: 1020px; 
+            height: 120px; 
+            clear: both;
+        }
+
+        @media screen and (max-width:1019px) {
+            #item1 {
+            background-color: white;
+            background-image: url("../../images/옥룡설산.jpg");
+            background-size: cover;
+            width: 690px;
+            height: 200px;
+        }
+        #main {
+            font-size: 3em;
+            padding: 0px;
+            margin: 20px 2cqmin;
+            display: inline-block;
+            text-decoration: none;
+        }
+        #data1 {
+            text-align: center;
+            width: 690px;
+            padding: 0px;
+        }
+        ul,li {
+            list-style: none;
+        }
+        #data1 a {
+            font-size: 1em;
+            text-decoration: none;
+        }
+        #data1 ul li {
+            display: inline-block;
+            position: relative;
+            width: 120px;
+            padding: 10px;
+        }
+        
+        #data1 ul li ul {
+            display: none;
+            position: absolute;
+        }
+        #data1 ul li:hover ul {
+            display: block;
+        }
+        #data2{
+            width: 470px; 
+            height: 800px; 
+            float: left;
+            background-color: white; 
+            padding: 25px;
+        }
+        #data3{
+            width: 220px; 
+            height: 900px; 
+            float: left; 
+            background-color: white;
+        }
+        .imgs {
+            width: 180px;
+            margin:20px;
+        }
+        }
+
+        @media screen and (max-width:760px) {
+            #item1 {
+            background-color: white;
+            background-image: url("../../images/옥룡설산.jpg");
+            background-size: cover;
+            width: 550px;
+            height: 150px;
+        }
+        #main {
+            font-size: 18pt;
+            padding: 0px;
+            margin: 20px 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        #data1 {
+            width: 550px;
+            padding: 0px;
+        }
+        ul,li {
+            list-style: none;
+        }
+        #data1 a {
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+        #data1 ul li {
+            display: inline-block;
+            position: relative;
+            width: 120px;
+            padding: 10px;
+        }
+        #data1 ul li ul {
+            display: none;
+            position: absolute;
+            left: 0px
+        }
+        #data1 ul li:hover ul {
+            display: block;
+        }
+        #data2{
+            width: 550px; 
+            height: 550px; 
+            float: left;
+            background-color: white; 
+            padding: 25px;
+        }
+        #data3{
+            width: 550px; 
+            height: 350px; 
+            float: left; 
+            background-color: white;
+        }
+        .imgs {
+            width: 200px;
+            margin:10px;
+        }
+        }
+        @media screen and (max-width:500px) {
+            #item1 {
+            background-color: white;
+            background-image: url("../../images/옥룡설산.jpg");
+            background-size: cover;
+            width: 400px;
+            height: 100px;
+        }
+        #itme2{
+            width: 400px;
+        }
+        #data1 {
+            text-align: center;
+            width: 400px;
+            padding: 0px;
+        }
+        ul,li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #data1 a {
+            font-size: 0.6em;
+            text-decoration: none;
+        }
+        #data1 ul li {
+            display: inline-block;
+            position: relative;
+            width: 90px;
+            padding: 10px;
+        }
+        #data1 ul li ul {
+            display: none;
+            position: absolute;
+        }
+        #data2{
+            width: 400px; 
+            height: 550px; 
+        }
+        .imgs {
+            width: 350px;
+            height: 200px;
+            margin:10px 25px;
+        }
     }
-    
-  </style>
+        
+    </Style>
 </head>
 <body>
-  <p><br ></p>
-  <div class="container">
-    <form name="myform">
-      
-    </form>
-  </div>
+<p><br/></p>
+<div class="container">
+    <div id="item1" >
+        <span><a href="test1.html" id="main">玉龙雪山</a></span>
+    </div>
+    <div id="item2">
+        <div id="data1">
+            <ul>
+                <li><a href="#">옥룡설산 소개</a></li>
+                <li><a href="#">옥룡설산 사계</a>
+                </li>
+                <li><a href="#">리조트</a>
+                </li>
+                <li><a href="#">주변명소</a>
+                    <ul>
+                        <li><a href="#">명소1</a></li>
+                        <li><a href="#">명소2</a></li>
+                        <li><a href="#">명소3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- 글 적는 곳 -->
+        <div id="data2">
+            <h2>옥룡설산 소개</h2>
+            중국 운남성에 남단에 위치한 옥룡설산 (玉龍雪山, 위룽쉐산)은 1년 내내 녹지 않는 산 위의 만년설이 하얀 용처럼 보인다 하여 이름이 붙었졌다 한다. 나시(納西)족이 신성시하는 하는 산으로 히말라야 산맥 중 한 줄기이다. 주봉은 해발 5596m이다.<br/>
+            <hr/>
+            소속 국가 : <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjgw&pkid=9&os=475534&qvt=0&query=%EC%A4%91%EA%B5%AD">중화인민공화국</a><br />
+            <hr/>
+            해발고도 : 5596 미터<br/>
+            <hr />
+            지역 : <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EB%A6%AC%EC%9E%A5">리장</a><br />
+            <hr />
+            산맥 : 윈링<br />
+            <hr />
+            돌출높이 : 3302미터
+        </div>
+        <!-- 이미지 나오는 곳 -->
+        <div id="data3">
+            <div id="img">
+            <a href="test1.html" target="_blank"><img src="../../images/옥룡설산1.jpg" class="imgs"></a>
+            <a href="test1.html" target="_blank"><img src="../../images/옥룡설산2.jpg" class="imgs"></a>
+            <a href="test1.html" target="_blank"><img src="../../images/옥룡설산3.jpg" class="imgs"></a>
+        </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
